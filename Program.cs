@@ -12,9 +12,9 @@ namespace Console_Calculator
             var history = new List<string> {};
             string one;
             string two;
-            int nOne;
-            int nTwo;
-            int answer;
+            double nOne;
+            double nTwo;
+            double answer;
             while (tryAgain == true)
             {
                 Console.WriteLine("-a     add\n-s     subtract\n-m     multiply\n-d     divide\n-h     view history\n-e     exit\nthese will all only add 2 numbers.");
@@ -25,14 +25,14 @@ namespace Console_Calculator
                     Console.Clear();
                     Console.WriteLine("You have entered add mode, please type the first numer to add");
                     one = Console.ReadLine();
-                    while(!int.TryParse(one, out nOne))
+                    while(!double.TryParse(one, out nOne))
                     {
                         Console.WriteLine("Whoops! thats not a number, can you try that again?");
                         one = Console.ReadLine();
                     }
                     Console.WriteLine("ok, and now the second number?");
                     two = Console.ReadLine();
-                    while (!int.TryParse(two, out nTwo))
+                    while (!double.TryParse(two, out nTwo))
                     {
                         Console.WriteLine("Whoops! thats not a number, can you try that again?");
                         two = Console.ReadLine();
@@ -63,14 +63,14 @@ namespace Console_Calculator
                     Console.Clear();
                     Console.WriteLine("You have entered subtract mode, please type the first numer to subtract");
                     one = Console.ReadLine();
-                    while (!int.TryParse(one, out nOne))
+                    while (!double.TryParse(one, out nOne))
                     {
                         Console.WriteLine("Whoops! thats not a number, can you try that again?");
                         one = Console.ReadLine();
                     }
                     Console.WriteLine("ok, and now the second number?");
                     two = Console.ReadLine();
-                    while (!int.TryParse(two, out nTwo))
+                    while (!double.TryParse(two, out nTwo))
                     {
                         Console.WriteLine("Whoops! thats not a number, can you try that again?");
                         two = Console.ReadLine();
@@ -101,14 +101,14 @@ namespace Console_Calculator
                     Console.Clear();
                     Console.WriteLine("You have entered multiply mode, please type the first numer to multiply");
                     one = Console.ReadLine();
-                    while (!int.TryParse(one, out nOne))
+                    while (!double.TryParse(one, out nOne))
                     {
                         Console.WriteLine("Whoops! thats not a number, can you try that again?");
                         one = Console.ReadLine();
                     }
                     Console.WriteLine("ok, and now the second number?");
                     two = Console.ReadLine();
-                    while (!int.TryParse(two, out nTwo))
+                    while (!double.TryParse(two, out nTwo))
                     {
                         Console.WriteLine("Whoops! thats not a number, can you try that again?");
                         two = Console.ReadLine();
@@ -139,14 +139,14 @@ namespace Console_Calculator
                     Console.Clear();
                     Console.WriteLine("You have entered divide mode, please type the first numer to divide");
                     one = Console.ReadLine();
-                    while (!int.TryParse(one, out nOne) || one == "0")
+                    while (!double.TryParse(one, out nOne) || one == "0")
                     {
                         Console.WriteLine("Whoops! either thats not a number or you tried to divide by 0, can you try that again?");
                         one = Console.ReadLine();
                     }
                     Console.WriteLine("ok, and now the second number?");
                     two = Console.ReadLine();
-                    while (!int.TryParse(two, out nTwo) || two == "0")
+                    while (!double.TryParse(two, out nTwo) || two == "0")
                     {
                         Console.WriteLine("Whoops! either thats not a number or you tried to divide by 0, can you try that again?");
                         two = Console.ReadLine();
